@@ -16,10 +16,18 @@ module.exports = {
       // html-loader can replace all image urls in .html file
       { test: /\.html$/, loader: "html-loader" },
       {
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract("style", "css")
+      },
+      {
         test: /\.less$/,
         loader: ExtractTextPlugin.extract("style", "css", "less")
       },
-      { test: /\.(png|jpg)$/, loader: "url-loader?limit=1024" }
+      { test: /\.(png|jpg)$/, loader: "url-loader?limit=1024" },
+      {
+        test: /\.(ttf|eot|svg|woff(?:2)?)(\?[a-z0-9]+)?$/,
+        loader: "url-loader?limit=1024"
+      }
     ]
   },
   plugins: [
