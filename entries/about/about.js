@@ -6,3 +6,5 @@ require("./about.less");
 
 // js
 // -----------------------------
+var $ = require("jquery");
+require("materializeJs");

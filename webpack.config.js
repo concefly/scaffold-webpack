@@ -30,6 +30,11 @@ module.exports = {
       }
     ]
   },
+  resolve: {
+    alias: {
+      "materializeJs": "materialize-css/dist/js/materialize.js",
+    },
+  },
   plugins: [
     new ExtractTextPlugin("[name].css"),
     new HtmlWebpackPlugin({
