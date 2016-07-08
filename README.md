@@ -1,15 +1,27 @@
-Materialize-css 前端构建框架
-===========================
+# scaffold-webpack
 
-Feature
---------------------
+> A Vue.js project
 
-- webpack构建，所有文件拍平后放入`.dist`
-- `LESS`生成样式表，支持base、component、page三个层面的样式表组织
-- 原生`javascript`，支持CMD和AMD写法
+## Build Setup
 
-Note
---------------------
+``` bash
+# install dependencies
+npm install
 
-- webpack sass-loader 失效（调用node-sass失败，路径错误）。暂时引用编译好的materialize.css。
+# serve with hot reload at localhost:8080
+npm run dev
 
+# build for production with minification
+npm run build
+
+# run unit tests
+npm run unit
+
+# run e2e tests
+npm run e2e
+
+# run all tests
+npm test
+```
+
+For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
