@@ -4,6 +4,7 @@ var merge = require('webpack-merge')
 var utils = require('./utils')
 var baseWebpackConfig = require('./webpack.base.conf')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
+var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 // add hot-reload related code to entry chunks
 Object.keys(baseWebpackConfig.entry).forEach(function (name) {
@@ -12,11 +13,12 @@ Object.keys(baseWebpackConfig.entry).forEach(function (name) {
 
 module.exports = merge(baseWebpackConfig, {
   module: {
-    loaders: utils.styleLoaders()
+    loaders: utils.styleLoaders({extract: true})
   },
   // eval-source-map is faster for development
   devtool: '#eval-source-map',
   plugins: [
+    new ExtractTextPlugin(utils.assetsPath('css/[name].[contenthash].css')),
     new webpack.DefinePlugin({
       'process.env': config.dev.env
     }),
