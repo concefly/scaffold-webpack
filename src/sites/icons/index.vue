@@ -7,8 +7,8 @@
     </div>
     <div class="row">
       <div class="m12">
-        <ui-icon type="info_outline"></ui-icon>
-        <ui-icon type="search" size="large"></ui-icon>
+        <ui-icon>info_outline</ui-icon>
+        <ui-icon size="large">search</ui-icon>
       </div>
     </div>
   </div>

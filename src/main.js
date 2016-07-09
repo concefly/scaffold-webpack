@@ -12,6 +12,9 @@ router.map({
   '/icons': {
     component: require('./sites/icons')
   },
+  '/buttons': {
+    component: require('./sites/buttons')
+  },
   '/': {
     component: require('./sites/index')
   }

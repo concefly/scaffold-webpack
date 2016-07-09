@@ -1,15 +1,11 @@
 <template lang="html">
-  <i class="material-icons {{size || ''}}">{{type}}</i>
+  <i class="material-icons {{ext}}"><slot></slot></i>
 </template>
 
 <script>
 export default {
   props: {
-    type: {
-      type: String,
-      required: true
-    },
-    size: {
+    ext: {
       type: String
     }
   }
@@ -18,4 +14,7 @@ export default {
 
 <style lang="scss">
 @import url(http://fonts.useso.com/icon?family=Material+Icons);
+.material-icons {
+  /* font-size: inherit !important; */
+}
 </style>

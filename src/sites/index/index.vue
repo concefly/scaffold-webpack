@@ -1,6 +1,7 @@
 <template lang="html">
   <a v-link="'/color'">Color</a> <br>
-  <a v-link="'/icons'">Icons</a>
+  <a v-link="'/icons'">Icons</a> <br>
+  <a v-link="'/buttons'">Buttons</a>
 </template>
 
 <script>
