@@ -8,9 +8,4 @@ describe('sample test', () => {
     done();
   });
 
-  it('window should be exist', done => {
-    expect(window.navigator.vendor).to.be.a('string');
-    done();
-  })
-
 })
