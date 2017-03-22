@@ -7,16 +7,11 @@ require("./index.less");
 // ---------------------------
 
 require.ensure([], function () {
-  var addMethods = require("../../components/addMethods");
+  var addMethods = require("../../lib/addMethods");
   console.log("1+2=%s", addMethods.add(1,2));
 }, "arithmeticMethods");
 
 require.ensure([], function () {
-  var minusMethods = require("../../components/minusMethods");
+  var minusMethods = require("../../lib/minusMethods");
   console.log("1-2=%s", minusMethods.minus(1,2));
 }, "arithmeticMethods");
-
-// require.ensure([], function () {
-//   var addMethods = require("../components/addMethods");
-//   console.log("2+3=%s", addMethods.add(2,3));
-// })
